@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import avatar from "../assets/avatar.png";
+import huohuo from "../assets/huohuo.gif";
 
 const Header = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -30,7 +32,7 @@ const Header = () => {
   return (
     <header className="text-center py-10">
       <motion.img
-        src={isHovered ? "/huohuo.gif" : "/avatar.png"}
+        src={isHovered ? huohuo : avatar} alt="avatar"
         className="w-75 h-75 mx-auto rounded-full border-2 border-gray-500 cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
