@@ -1,0 +1,29 @@
+#stage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .curtain {
+    position: absolute;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(90, 0, 0, 1), rgba(200, 10, 10, 0.3), rgba(90, 0, 0, 1)),
+                linear-gradient(to left, rgba(200, 10, 10, 0.7), rgba(204, 15, 15, 0.9), rgba(200, 10, 10, 0.8));
+    background-size: 67px 67px, 53px 53px;
+    height: 100%;
+    top: 0;
+    transition: width 1.5s ease-in-out, transform 1s ease;
+  }
+  
+  #curtain-left {
+    left: 0;
+  }
+  
+  #curtain-right {
+    right: 0;
+    transform: scaleX(-1);
+  }
+  
