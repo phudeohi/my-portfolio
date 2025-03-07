@@ -10,7 +10,6 @@
 
 .curtain {
   position: absolute;
-  /* Sử dụng các màu trắng, nhẹ nhàng với độ mờ khác nhau */
   background: linear-gradient(
                 to left, 
                 rgba(255, 255, 255, 0), 

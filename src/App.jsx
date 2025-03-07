@@ -38,7 +38,6 @@ const App = () => {
     }
   };
 
-  // Block hiển thị các liên kết liên hệ (sẽ luôn hiển thị khi showMore = true)
   const ContactLinks = () => (
     <div className="flex flex-col items-center space-y-2">
       <div className="flex items-center space-x-2">
@@ -78,12 +77,9 @@ const App = () => {
 
   return (
     <div className="bg-black text-white min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Màn che Curtain */}
       <CurtainStage stageState={curtainState} onTransitionComplete={handleCurtainTransitionComplete} />
 
-      {/** Render theo layout dựa trên chiều màn hình **/}
       {!isPortrait ? (
-        // Landscape: giữ nguyên cách hoạt động ban đầu
         <>
           <motion.div
             initial={{ x: 0, width: "100%" }}
@@ -118,7 +114,6 @@ const App = () => {
                     Experience
                   </button>
                 </motion.nav>
-                {/* Hiển thị các liên kết ngay khi Show More được ấn */}
                 <ContactLinks />
               </>
             )}
@@ -175,7 +170,6 @@ const App = () => {
           )}
         </>
       ) : (
-        // Portrait: sắp xếp nội dung theo chiều dọc
         <div className="flex flex-col items-center w-full space-y-8 p-4">
           <Header />
           {showMore ? (
@@ -203,7 +197,6 @@ const App = () => {
                   Experience
                 </button>
               </motion.nav>
-              {/* Hiển thị liên kết ngay khi Show More được ấn */}
               <ContactLinks />
               <AnimatePresence mode="wait">
                 {activeSection === "about" && (
