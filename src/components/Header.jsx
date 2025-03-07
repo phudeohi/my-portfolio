@@ -25,12 +25,12 @@ const Header = () => {
     }),
   };
 
-  const text1 = "Tran Quoc Phu";
-  const text2 = "Minhi";
+  const text1 = "Trần Quốc Phú";
+  const text2 = "phudeohi";
   const displayText = isAltText ? text2 : text1;
 
   return (
-    <header className="text-center py-10">
+    <header className="text-center">
       <motion.img
         src={isHovered ? huohuo : avatar} alt="avatar"
         className="w-75 h-75 mx-auto rounded-full border-2 border-gray-500 cursor-pointer"
@@ -63,7 +63,7 @@ const Header = () => {
       </div>
 
 
-      <p className="text-gray-400 text-2xl mt-2">Frontend/Creative Developer</p>
+      <p className="text-gray-400 text-2xl mt-2">Frontend Developer</p>
     </header>
   );
 };
